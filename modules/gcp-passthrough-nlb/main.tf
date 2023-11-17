@@ -84,7 +84,7 @@ resource "google_compute_firewall" "allow_proxies" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22", "443"]
+    ports    = ["443"]
   }
 }
 
@@ -102,7 +102,7 @@ resource "google_compute_firewall" "allow_subnet" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22", "443"]
+    ports    = ["443"]
   }
 }
 
@@ -121,7 +121,7 @@ resource "google_compute_firewall" "allow_psc" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22", "443"]
+    ports    = ["443"]
   }
 }
 
