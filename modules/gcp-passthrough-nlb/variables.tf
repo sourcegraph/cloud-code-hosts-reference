@@ -53,6 +53,10 @@ variable "name" {
   default = "sourcegraph-psc"
 }
 
+variable "healthcheck-https-path" {
+  default = "/status"
+}
+
 variable "domain" {
   type    = string
   default = null

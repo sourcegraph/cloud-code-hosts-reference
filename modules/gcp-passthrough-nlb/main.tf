@@ -169,7 +169,7 @@ resource "google_compute_region_health_check" "self" {
   https_health_check {
     host         = var.domain
     proxy_header = "NONE"
-    request_path = "/-/health"
+    request_path = var.healthcheck-https-path
   }
 
   log_config {
