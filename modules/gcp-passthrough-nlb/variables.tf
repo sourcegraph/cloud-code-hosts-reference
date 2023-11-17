@@ -53,7 +53,7 @@ variable "name" {
   default = "sourcegraph-psc"
 }
 
-variable "healthcheck-https-path" {
+variable "healthcheck_https_path" {
   default = "/status"
 }
 
