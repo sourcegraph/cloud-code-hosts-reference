@@ -7,9 +7,6 @@ resource "google_compute_service_attachment" "self" {
   # the region has to the same as the consumer due to GCP limitation
   region = var.region
 
-  # optional, e.g., gitlab.internal.company.com
-  # TODO: (dax) fixup
-  domain_names = []
 
   enable_proxy_protocol = false
   # a psc subnet, or with a `purpose=PRIVATE_SERVICE_CONNECT` `google_compute_subnetwork` in Terraform

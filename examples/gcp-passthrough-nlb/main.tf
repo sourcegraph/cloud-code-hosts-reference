@@ -32,7 +32,7 @@ module "sourcegraph-psc" {
 
   authorized_consumer_projects = {
     "src-cd795a54649fc24d9b5f" : {
-      id : "src-cd795a54649fc24d9b5f",
+      id : var.sourcegraph_provided_project_name,
       limit : 10,
     }
   }

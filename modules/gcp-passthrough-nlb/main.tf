@@ -25,8 +25,6 @@ data "google_project" "self" {
   project_id = var.project_id
 }
 
-
-
 resource "random_id" "tf_prefix" {
   byte_length = 3
 }
@@ -36,8 +34,6 @@ resource "random_id" "tf_prefix" {
 data "google_compute_network" "self" {
   name = var.network_id
 }
-
-# @michaellzc we also need the subnetwork the instance already exists in
 
 data "google_compute_subnetwork" "self" {
   name = var.compute_instance_subnetwork
@@ -88,7 +84,7 @@ resource "google_compute_firewall" "allow_proxies" {
 
   allow {
     protocol = "tcp"
-    ports    = ["80", "443"]
+    ports    = ["22", "443"]
   }
 }
 
@@ -106,7 +102,7 @@ resource "google_compute_firewall" "allow_subnet" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22", "80", "443"]
+    ports    = ["22", "443"]
   }
 }
 
@@ -125,7 +121,7 @@ resource "google_compute_firewall" "allow_psc" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22", "80", "443"]
+    ports    = ["22", "443"]
   }
 }
 

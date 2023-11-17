@@ -16,3 +16,7 @@ variable "instance_name" {
 variable "subnet_name" {
   type = string
 }
+
+variable "sourcegraph_provided_project_name" {
+  type = string
+}

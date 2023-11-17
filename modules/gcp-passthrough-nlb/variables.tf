@@ -58,10 +58,6 @@ variable "healthcheck_https_path" {
 }
 
 
-variable "domain_root" {
-  default = "sg.dev."
-}
-
 variable "proxy_only_subnetwork_cidr" {
   default     = "10.0.0.0/24"
   description = "the cidr block for the regional managed proxy subnet"
@@ -81,13 +77,6 @@ variable "network_tags" {
     "sourcegraph-psc",
   ]
 }
-
-variable "subnet_router_network_tags" {
-  default = [
-    "sourcegraph-psc",
-  ]
-}
-
 
 variable "authorized_consumer_projects" {
   type = map(object(
