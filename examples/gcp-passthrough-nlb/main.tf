@@ -16,6 +16,15 @@ data "google_compute_subnetwork" "ghe" {
   region  = var.region
 }
 
+data "google_project" "gcp_project" {
+  project_id = var.project_name
+}
+
+data "google_compute_network" "gcp_vpc" {
+  project = var.project_name
+  name    = var.vpc_name
+}
+
 module "sourcegraph-psc" {
   source = "../../modules/gcp-passthrough-nlb"
 

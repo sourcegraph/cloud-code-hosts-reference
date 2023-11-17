@@ -7,7 +7,6 @@ resource "google_compute_service_attachment" "self" {
   # the region has to the same as the consumer due to GCP limitation
   region = var.region
 
-
   enable_proxy_protocol = false
   # a psc subnet, or with a `purpose=PRIVATE_SERVICE_CONNECT` `google_compute_subnetwork` in Terraform
   # make sure ingress traffic is allowed from the psc subnet against open ports to the MIG/NEG, e.g., 22, 80, 443

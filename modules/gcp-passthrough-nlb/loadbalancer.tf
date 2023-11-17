@@ -34,9 +34,8 @@ resource "google_compute_forwarding_rule" "https" {
   network    = data.google_compute_network.self.self_link
   subnetwork = data.google_compute_subnetwork.self.self_link
 
-  network_tier = "PREMIUM"
-  # port_range            = "443-443"
-  ports                 = ["80", "443", "22"]
+  network_tier          = "PREMIUM"
+  ports                 = ["443"]
   allow_global_access   = true
   ip_address            = google_compute_address.self.address
   ip_protocol           = "TCP"
