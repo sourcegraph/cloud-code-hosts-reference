@@ -31,7 +31,7 @@ module "sourcegraph-psc" {
   compute_instance_network_tags = data.google_compute_instance.ghe.tags
 
   authorized_consumer_projects = {
-    "src-cd795a54649fc24d9b5f" : {
+    "sourcegraph-psc" : {
       id : var.sourcegraph_provided_project_name,
       limit : 10,
     }
