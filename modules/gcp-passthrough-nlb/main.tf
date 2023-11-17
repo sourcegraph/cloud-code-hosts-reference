@@ -167,7 +167,6 @@ resource "google_compute_region_health_check" "self" {
   unhealthy_threshold = 2
 
   https_health_check {
-    host         = var.domain
     proxy_header = "NONE"
     request_path = var.healthcheck_https_path
   }

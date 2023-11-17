@@ -57,10 +57,6 @@ variable "healthcheck_https_path" {
   default = "/status"
 }
 
-variable "domain" {
-  type    = string
-  default = null
-}
 
 variable "domain_root" {
   default = "sg.dev."
